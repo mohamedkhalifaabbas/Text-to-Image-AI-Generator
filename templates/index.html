@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generation App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Image Generation</h1>
+            <p>Create stunning, high-quality images from your ideas in seconds.</p>
+        </header>
+
+        <!-- Form for JS AJAX -->
+        <form id="imageForm">
+            <div class="input-group">
+                <input type="text" name="prompt" id="promptInput" placeholder="Type your image description..." required>
+                <button type="submit">Generate</button>
+            </div>
+        </form>
+
+        <!-- Loading spinner -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Generating your image...</p>
+        </div>
+
+        <!-- Result container -->
+        <div id="result" class="result">
+            <!-- الصورة هتظهر هنا بعد التوليد -->
+        </div>
+    </div>
+
+    <!-- JS script -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
